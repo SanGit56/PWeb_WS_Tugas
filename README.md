@@ -9,3 +9,5 @@ Duplikat dari **starting/**, tapi menggunakan Framework CSS, Bootstrap, untuk _s
 Portal berita untuk belajar _layout_, menggunakan templat _layout_ Bootstrap
 5. **crud/**
 Latihan CRUD (_create_, _read_, _update_, _delete_) data menggunakan PHP
+6. **artikel/**
+Penggunaan basisdata MySQL dalam pembuatan halaman artikel dinamis
