@@ -1,0 +1,118 @@
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-size: x-large;
+}
+
+a {
+    text-decoration: none;
+}
+
+.hero {
+    height: 100vh;
+    background-image: url('../gambar/foto.jpg');
+    background-size: cover;
+    padding-top: 10%;
+    padding-left: 20%;
+    filter: sepia(50%);
+}
+
+.garis-bawah {
+    border-bottom: 2px solid black;
+}
+
+.peta {
+    text-align: center;
+    padding: 50px 0;
+    height: 500px;
+}
+
+.peta iframe {
+    border-radius: 15px;
+    box-shadow: 0 0 15px 7px #000000;
+}
+
+.rak-tautan {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.tautan {
+    text-decoration: none;
+    color: #e9dfc4;
+    width: calc(20% - 20px);
+    padding: 25px 0;
+    text-align: center;
+    background-color: black;
+    border-radius: 15px;
+    transition: background-color 0.4s, transform  0.4s;
+}
+
+.tautan:hover {
+    text-decoration: none;
+    background-color: #e9dfc4;
+    transform: translateY(-10px);
+    color: black;
+}
+
+.versi-laman {
+    text-decoration: none;
+    color: #e9dfc4;
+    width: calc(33% - 20px);
+    padding: 25px 0;
+    text-align: center;
+    background-color: black;
+    border-radius: 15px;
+    transition: background-color 0.4s, transform  0.4s;
+}
+
+.versi-laman:hover {
+    text-decoration: none;
+    background-color: #e9dfc4;
+    transform: translateY(-10px);
+    color: black;
+}
+
+.rak-video {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 20px;
+}
+
+.rak-video iframe {
+    width: calc(33% - 30px);
+    height: 220px;
+    border-radius: 15px;
+}
+
+@media screen and (max-width: 768px) {
+    .hero {
+        padding-left: 5%;
+    }
+
+    .tautan {
+        width: calc(50% - 20px);
+    }
+
+    .versi-laman {
+        width: calc(100% - 20px);
+    }
+
+    .rak-video {
+        gap: 20px;
+    }
+
+    .rak-video iframe {
+        width: calc(100% - 20px);
+    }
+}

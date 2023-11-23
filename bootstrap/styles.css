@@ -1,0 +1,21 @@
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
+#hero {
+    height: 100vh;
+    background-image: url('../gambar/foto.jpg');
+    background-size: cover;
+    padding-left: 3%;
+    filter: sepia(50%);
+}
+
+.garis-bawah {
+    border-bottom: 2px solid black;
+    font-weight: 700;
+}
+
+#map iframe {
+    border-radius: 15px;
+    box-shadow: 0 0 15px 7px #000000;
+}
