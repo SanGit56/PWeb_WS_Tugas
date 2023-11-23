@@ -1,8 +1,8 @@
 <?php
   $db_server="localhost";
-	$db_username="root";
-	$db_password="";
-	$db_database="buat_belajar";
+	$db_username="kulp3765_5025211166";
+	$db_password="sozs211166";
+	$db_database="kulp3765_5025211166";
 
   $id_ada = isset($_GET['id']) ? $_GET['id']: "";
 
@@ -246,7 +246,7 @@
   <main class="container">
     <div class="row g-5">
       <div class="col-md-8">
-        <img src="../<?= isset($gambar) ? $gambar: ""; ?>" width="100%" class="img-fluid">
+        <img src="<?= isset($gambar) ? $gambar: ""; ?>" width="100%" class="img-fluid">
 
         <h1 class="pb-4 my-3 fst-italic border-bottom">
           <?= isset($judul) ? $judul: ""; ?>
@@ -274,7 +274,7 @@
             <h4 class="fst-italic">Artikel Teratas</h4>
             <ul class="list-unstyled">
               <li>
-                <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="artikel/12.html">
+                <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="artikel.php?id=13">
                   <img src="../gambar/m.jpg" alt="" width="100" height="100">
                   <div class="col-lg-8">
                     <h6 class="mb-0">Tuanku Imam Bonjol</h6>
@@ -283,7 +283,7 @@
                 </a>
               </li>
               <li>
-                <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="artikel/13.html">
+                <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="artikel.php?id=14">
                   <img src="../gambar/n.jpg" alt="" width="100" height="100">
                   <div class="col-lg-8">
                     <h6 class="mb-0">Pangeran Diponegoro</h6>
@@ -292,7 +292,7 @@
                 </a>
               </li>
               <li>
-                <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="artikel/14.html">
+                <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="artikel.php?id=15">
                   <img src="../gambar/o.jpeg" alt="" width="100" height="100">
                   <div class="col-lg-8">
                     <h6 class="mb-0">Jenderal Soedirman</h6>
