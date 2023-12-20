@@ -11,3 +11,5 @@ Portal berita untuk belajar _layout_, menggunakan templat _layout_ Bootstrap
 Latihan CRUD (_create_, _read_, _update_, _delete_) data menggunakan PHP
 6. **artikel/**
 Penggunaan basisdata MySQL dalam pembuatan halaman artikel dinamis
+7. **ajax/**
+Contoh penggunaan jQuery AJAX
