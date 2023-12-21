@@ -8,7 +8,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-3 pt-1 pane">
-            <form id="penugasan">
+            <form method="post" action="utilitas/tambah.php" id="penugasan">
                 <legend>Buat Penugasan</legend>
 
                 <div id="notif"></div>
@@ -23,8 +23,6 @@
                             while ($row = $hasil->fetch_assoc()) {
                                 echo "<option value=" . $row['id'] . ">" . $row['nama'] . "</option>";
                             }
-                    
-                            $konek->close();
                         ?>
                     </select>
                 </div>
@@ -38,50 +36,91 @@
                 </div>
 
                 <div class="mb-3">
-                    <button type="submit" class="btn btn-primary" onclick="tambahData()">Kirim</button>
+                    <button type="submit" class="btn btn-primary">Kirim</button>
                 </div>
             </form>
         </div>
 
         <div class="col-md-3 pt-1 pane">
             <h3>Belum Dikerjakan</h3>
+
+            <?php
+                $sql = "SELECT id, petugas, judul, deskripsi FROM pweb_kerjaan WHERE status = '2'";
+                $hasil = $konek->query($sql);
+        
+                while ($row = $hasil->fetch_assoc()) {
+                    echo '
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">' . $row["judul"] . '</h5>
+                            <p class="card-text">' . $row["deskripsi"] . '</p>
+                            <small>' . $row["petugas"] . '</small>
+
+                            <form method="post" action="utilitas/ubah.php" id="penugasan">
+                                <input class="form-control" type="hidden" name="id" id="id" value="' . $row["id"] . '">
+                                <input class="form-control" type="hidden" name="status" id="status" value="3">
+                                <button type="submit" class="btn btn-primary">Ambil kerjaan</button>
+                            </form>
+                        </div>
+                    </div>
+                    ';
+                }
+            ?>
         </div>
 
         <div class="col-md-3 pt-1 pane">
             <h3>Sedang Dikerjakan</h3>
+
+            <?php
+                $sql = "SELECT id, petugas, judul, deskripsi FROM pweb_kerjaan WHERE status = '3'";
+                $hasil = $konek->query($sql);
+        
+                while ($row = $hasil->fetch_assoc()) {
+                    echo '
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">' . $row["judul"] . '</h5>
+                            <p class="card-text">' . $row["deskripsi"] . '</p>
+                            <small>' . $row["petugas"] . '</small>
+
+                            <form method="post" action="utilitas/ubah.php" id="penugasan">
+                                <input class="form-control" type="hidden" name="id" id="id" value="' . $row["id"] . '">
+                                <input class="form-control" type="hidden" name="status" id="status" value="4">
+                                <button type="submit" class="btn btn-primary">Ambil kerjaan</button>
+                            </form>
+                        </div>
+                    </div>
+                    ';
+                }
+            ?>
         </div>
 
         <div class="col-md-3 pt-1 pane">
             <h3>Selesai</h3>
+
+            <?php
+                $sql = "SELECT id, petugas, judul, deskripsi FROM pweb_kerjaan WHERE status = '4'";
+                $hasil = $konek->query($sql);
+        
+                while ($row = $hasil->fetch_assoc()) {
+                    echo '
+                    <div class="card mb-3">
+                        <div class="card-body bg-success">
+                            <h5 class="card-title">' . $row["judul"] . '</h5>
+                            <p class="card-text">' . $row["deskripsi"] . '</p>
+                            <small>' . $row["petugas"] . '</small>
+
+                            <form method="post" action="utilitas/ubah.php" id="penugasan">
+                                <input class="form-control" type="hidden" name="id" id="id" value="' . $row["id"] . '">
+                            </form>
+                        </div>
+                    </div>
+                    ';
+                }
+            ?>
         </div>
 
     </div>
 </div>
-
-<script>
-    function tambahData() {
-        var dataForm = new FormData(document.getElementById("penugasan"));
-
-        var xhr = new XMLHttpRequest();
-
-        xhr.open("POST", "utilitas/tambah.php", true);
-        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState == 4) {
-                if (xhr.status == 200) {
-                    console.log(xhr.responseText);
-                } else {
-                    var notif = document.getElementById("notif");
-                    notif.setAttribute("class", "alert alert-warning");
-                    notif.setAttribute("role", "alert");
-                    notif.innerHTML = xhr.statusText;
-                }
-            }
-        };
-
-        xhr.send(dataForm);
-    }
-</script>
 
 <?php include 'templat/footer.php'; ?>

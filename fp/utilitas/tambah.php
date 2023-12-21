@@ -4,8 +4,6 @@
         $judul = $_POST["judul"];
         $deskripsi = $_POST["deskripsi"];
 
-        var_dump($petugas . "," . $judul . "," . $deskripsi);die();
-
         include 'koneksi.php';
 
         $escapedPetugas = $konek->real_escape_string($petugas);
