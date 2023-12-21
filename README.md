@@ -13,3 +13,5 @@ Latihan CRUD (_create_, _read_, _update_, _delete_) data menggunakan PHP
 Penggunaan basisdata MySQL dalam pembuatan halaman artikel dinamis
 7. **ajax/**
 Contoh penggunaan jQuery AJAX
+8. **fp/**
+_Final project_ aplikasi kanban _board_ menggunakan AJAX

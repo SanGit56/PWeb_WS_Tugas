@@ -2,19 +2,21 @@
 
     <div class="container">
         <form method="post" action="kanban.php">
-            <fieldset>
-                <legend>Masuk</legend>
+            <legend>Masuk</legend>
 
-                <div class="mb-3">
-                    <input class="form-control" type="text" placeholder="masukkan nama" name="nama">
-                </div>
-                <div class="mb-3">
-                    <input class="form-control" type="text" placeholder="masukkan nrp" name="nrp">
-                </div>
+            <div class="mb-3">
+                <input class="form-control" type="text" placeholder="masukkan nama" name="nama">
+            </div>
+            <div class="mb-3">
+                <input class="form-control" type="text" placeholder="masukkan nrp" name="nrp">
+            </div>
 
+            <div class="mb-5">
                 <button type="submit" class="btn btn-primary">Kirim</button>
-            </fieldset>
+            </div>
         </form>
+
+        <hr>
 
         <?php
             include 'utilitas/koneksi.php';
@@ -22,7 +24,8 @@
             $sql = "SELECT id, nrp, nama FROM pweb_mahasiswa";
             $hasil = mysqli_query($konek, $sql);
 
-            echo "<table class='table table-bordered'>
+            echo "<table class='table table-bordered mt-5'>
+                <caption>gunakan akun yang tersedia di atas</caption>
                 <tr>
                     <th>id</th>
                     <th>nrp</th>
