@@ -1,8 +1,8 @@
 <?php
     $namaserver = "localhost";
-    $usernamedb = "root";
-    $passworddb = "";
-    $namadb = "buat_belajar";
+    $usernamedb = "kulp3765_5025211166";
+    $passworddb = "san5025211166";
+    $namadb = "kulp3765_5025211166";
 
     $konek = mysqli_connect($namaserver, $usernamedb, $passworddb, $namadb);
 

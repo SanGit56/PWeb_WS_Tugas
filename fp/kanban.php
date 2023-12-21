@@ -7,7 +7,7 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-3 pt-1 pane">
+        <div class="col-md-3 pt-1">
             <form method="post" action="utilitas/tambah.php" id="penugasan">
                 <legend>Buat Penugasan</legend>
 
@@ -41,7 +41,7 @@
             </form>
         </div>
 
-        <div class="col-md-3 pt-1 pane">
+        <div class="col-md-3 pt-1">
             <h3>Belum Dikerjakan</h3>
 
             <?php
@@ -68,7 +68,7 @@
             ?>
         </div>
 
-        <div class="col-md-3 pt-1 pane">
+        <div class="col-md-3 pt-1">
             <h3>Sedang Dikerjakan</h3>
 
             <?php
@@ -86,7 +86,7 @@
                             <form method="post" action="utilitas/ubah.php" id="penugasan">
                                 <input class="form-control" type="hidden" name="id" id="id" value="' . $row["id"] . '">
                                 <input class="form-control" type="hidden" name="status" id="status" value="4">
-                                <button type="submit" class="btn btn-primary">Ambil kerjaan</button>
+                                <button type="submit" class="btn btn-primary">Tandai selesai</button>
                             </form>
                         </div>
                     </div>
@@ -95,7 +95,7 @@
             ?>
         </div>
 
-        <div class="col-md-3 pt-1 pane">
+        <div class="col-md-3 pt-1">
             <h3>Selesai</h3>
 
             <?php
